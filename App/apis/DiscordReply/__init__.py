@@ -1,3 +1,4 @@
+import logging
 import interactions
 from interactions import Button
 
@@ -13,6 +14,7 @@ BotAgent = interactions.Client(
                 intents=interactions.Intents.DEFAULT | interactions.Intents.GUILD_MESSAGES | interactions.Intents.MESSAGE_CONTENT ,
                 proxy_url=BotSettings["BotOpt"]["PROXY_URL"],
                 proxy_auth=BotSettings["BotOpt"]["PROXY_AUTH"],
+                logging_level=logging.DEBUG
             )
 
 
